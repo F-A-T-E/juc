@@ -1,4 +1,4 @@
-package com.example.juc;
+package com.lvpf.juc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

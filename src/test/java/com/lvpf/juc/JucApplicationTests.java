@@ -1,4 +1,4 @@
-package com.example.juc;
+package com.lvpf.juc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
