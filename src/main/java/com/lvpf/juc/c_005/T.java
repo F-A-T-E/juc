@@ -2,10 +2,10 @@ package com.lvpf.juc.c_005;
 
 public class T implements Runnable{
 
-	private int count = 100;
+	private /*volatile*/ int count = 100;
 
 	@Override
-	public void run() {
+	public /* synchronized */ void run() {
 		count--;
 		System.out.println(Thread.currentThread().getName() + "count = " + count);
 	}
