@@ -1,6 +1,12 @@
 package com.lvpf.juc.c_026_00_interview.A1B2C3;
 
-public class T02_00_sync_wait_notify {
+import java.util.concurrent.CountDownLatch;
+
+public class T03_00_sync_wait_notify {
+	private static volatile boolean t2Started = false;
+
+	//private static CountDownLatch latch = new C(1);
+
 	public static void main(String[] args) {
 		final Object o = new Object();
 
@@ -8,17 +14,16 @@ public class T02_00_sync_wait_notify {
 		char[] aC = "ABCDEFG".toCharArray();
 
 		new Thread(()->{
+//			latch.await();
 			synchronized (o){
-				for(char c : aI){
-					System.out.print(c);
+
+				while(!t2Started){
 					try{
-						o.notify();
 						o.wait();
 					}catch (InterruptedException e){
 						e.printStackTrace();
 					}
 				}
-				o.notify(); //必须，否则无法停止程序
 			}
 		},"t1").start();
 
@@ -26,6 +31,8 @@ public class T02_00_sync_wait_notify {
 			synchronized (o){
 				for (char c : aC){
 					System.out.print(c);
+					//latch
+					t2Started = true;
 					try{
 						o.notify();
 						o.wait();
@@ -38,4 +45,5 @@ public class T02_00_sync_wait_notify {
 		},"t2").start();
 
 	}
+
 }
