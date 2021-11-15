@@ -2,7 +2,6 @@ package com.lvpf.juc.c_021_03_VarHandle;
 
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.VarHandle;
-import java.util.logging.MemoryHandler;
 
 public class T01_HelloVarHandle {
 	int x = 8;
@@ -19,6 +18,7 @@ public class T01_HelloVarHandle {
 
 	public static void main(String[] args) {
 		T01_HelloVarHandle t = new T01_HelloVarHandle();
+
 		//plain read / write
 		System.out.println((int)handle.get(t));
 		handle.set(t,9);
@@ -30,5 +30,4 @@ public class T01_HelloVarHandle {
 		handle.getAndAdd(t,10);
 		System.out.println(t.x);
 	}
-
 }

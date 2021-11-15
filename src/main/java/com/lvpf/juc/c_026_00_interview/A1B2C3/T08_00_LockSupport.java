@@ -25,7 +25,6 @@ public class T08_00_LockSupport {
 				LockSupport.unpark(t1); //叫醒t1
 			}
 		},"t2");
-
 		t1.start();
 		t2.start();
 	}

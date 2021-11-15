@@ -2,7 +2,7 @@ package com.lvpf.juc.c_000;
 
 public class T03_Sleep_Yield_Join {
 	public static void main(String[] args) {
-
+			testSleep();
 	}
 	static void testSleep(){
 		new Thread(()->{

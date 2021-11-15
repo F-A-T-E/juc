@@ -3,10 +3,8 @@ package com.lvpf.juc.c_026_00_interview.A1B2C3;
 public class T02_00_sync_wait_notify {
 	public static void main(String[] args) {
 		final Object o = new Object();
-
 		char[] aI = "1234567".toCharArray();
 		char[] aC = "ABCDEFG".toCharArray();
-
 		new Thread(()->{
 			synchronized (o){
 				for(char c : aI){

@@ -14,13 +14,14 @@ public class T10_00_PipedStream {
 		PipedInputStream input2 = new PipedInputStream();
 		PipedOutputStream output1 = new PipedOutputStream();
 		PipedOutputStream output2 = new PipedOutputStream();
+
 		input1.connect(output2);
 		input2.connect(output1);
+
 		String msg = "Your Turn";
 
 		new Thread(() -> {
 			byte[] buffer = new byte[9];
-
 			try{
 				for (char c : aI) {
 					input1.read(buffer);

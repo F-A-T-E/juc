@@ -5,7 +5,6 @@ import java.util.concurrent.BlockingQueue;
 
 public class T09_00_BlockingQueue {
 
-
 	static BlockingQueue<String> q1 = new ArrayBlockingQueue<>(1);
 	static BlockingQueue<String> q2 = new ArrayBlockingQueue<>(1);
 

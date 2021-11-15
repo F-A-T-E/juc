@@ -1,6 +1,7 @@
 package com.lvpf.juc.c_000;
 import java.util.concurrent.TimeUnit;
-public class T01_WhitisThread {
+
+public class T01_WhiteThread {
 	private static class T1 extends Thread{
 		@Override
 		public void run(){

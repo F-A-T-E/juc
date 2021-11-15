@@ -5,9 +5,9 @@ import java.util.concurrent.TimeUnit;
 public class ThreadLocal2 {
 
 	static ThreadLocal<Person> tl = new ThreadLocal<>();
-//	static{
-//		tl.set(new Person());
-//	}
+	static{
+		tl.set(new Person());
+	}
 
 	public static void main(String[] args) {
 		new Thread(() -> {
