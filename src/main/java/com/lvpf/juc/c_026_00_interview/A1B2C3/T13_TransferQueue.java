@@ -7,7 +7,6 @@ public class T13_TransferQueue {
 	public static void main(String[] args) {
 		char[] aI = "1234567".toCharArray();
 		char[] aC = "ABCDEFG".toCharArray();
-
 		TransferQueue<Character> queue = new LinkedTransferQueue<>();
 		new Thread(()->{
 			try{
@@ -19,7 +18,6 @@ public class T13_TransferQueue {
 				e.printStackTrace();
 			}
 		},"t1").start();
-
 		new Thread(()->{
 			try{
 				for(char c : aC){
