@@ -16,7 +16,6 @@ public class T05_00_lock_condition {
 		new Thread(()->{
 			try{
 				lock.lock();
-
 				for (char c: aI) {
 					System.out.println(c);
 					conditionT2.signal();
@@ -29,7 +28,6 @@ public class T05_00_lock_condition {
 				lock.unlock();
 			}
 		},"t1").start();
-
 		new Thread(()->{
 			try{
 				lock.lock();
@@ -39,9 +37,7 @@ public class T05_00_lock_condition {
 					conditionT1.signal();
 					conditionT2.await();
 				}
-
 				conditionT1.signal();
-
 			}catch (Exception e){
 				e.printStackTrace();
 			}finally {

@@ -15,7 +15,6 @@ public class T04_00_lock_condition {
 		new Thread(()->{
 			try{
 				lock.lock();
-
 				for (char c: aI) {
 					System.out.println(c);
 					condition.signal();
@@ -28,10 +27,10 @@ public class T04_00_lock_condition {
 				lock.unlock();
 			}
 		},"t1").start();
+
 		new Thread(()->{
 			try{
 				lock.lock();
-
 				for (char c: aC) {
 					System.out.println(c);
 					condition.signal();

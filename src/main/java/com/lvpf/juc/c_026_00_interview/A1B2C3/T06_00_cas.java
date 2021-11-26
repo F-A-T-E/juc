@@ -1,6 +1,7 @@
 package com.lvpf.juc.c_026_00_interview.A1B2C3;
 
 public class T06_00_cas {
+
 	enum ReadyToRun{T1,T2}
 
 	static volatile ReadyToRun r = ReadyToRun.T1; //思考为什么必须volatile

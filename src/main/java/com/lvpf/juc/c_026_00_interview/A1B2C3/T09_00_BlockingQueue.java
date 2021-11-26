@@ -13,20 +13,19 @@ public class T09_00_BlockingQueue {
 		char[] aC = "ABCDEFG".toCharArray();
 
 		new Thread(() -> {
-
 			for(char c : aI){
 				System.out.println(c);
 				try{
 					q1.put("ok");
-					q1.take();
+					q2.take();
 				}catch(InterruptedException e){
 					e.printStackTrace();
 				}
 			}
 		},"t1").start();
 
-		new Thread(() -> {
 
+		new Thread(() -> {
 			for(char c : aC){
 				try{
 					 q1.take();
@@ -41,5 +40,6 @@ public class T09_00_BlockingQueue {
 				}
 			}
 		},"t2").start();
+
 	}
 }

@@ -5,8 +5,6 @@ import java.util.concurrent.CountDownLatch;
 public class T03_00_sync_wait_notify {
 	private static volatile boolean t2Started = false;
 
-	//private static CountDownLatch latch = new C(1);
-
 	public static void main(String[] args) {
 		final Object o = new Object();
 
@@ -29,6 +27,7 @@ public class T03_00_sync_wait_notify {
 
 		new Thread(()->{
 			synchronized (o){
+
 				for (char c : aC){
 					System.out.print(c);
 					//latch
