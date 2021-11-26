@@ -13,19 +13,6 @@ public class T07_SingleThreadPool {
 				System.out.println(j + " " + Thread.currentThread().getName());
 			});
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	}
+
 }

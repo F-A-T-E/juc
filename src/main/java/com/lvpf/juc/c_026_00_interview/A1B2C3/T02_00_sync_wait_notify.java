@@ -11,7 +11,7 @@ public class T02_00_sync_wait_notify {
 					System.out.print(c);
 					try{
 						o.notify();
-						o.wait();
+						o.wait();//让出锁
 					}catch (InterruptedException e){
 						e.printStackTrace();
 					}
@@ -34,6 +34,5 @@ public class T02_00_sync_wait_notify {
 				o.notify();
 			}
 		},"t2").start();
-
 	}
 }

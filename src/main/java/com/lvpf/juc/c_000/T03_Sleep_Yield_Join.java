@@ -21,7 +21,6 @@ public class T03_Sleep_Yield_Join {
 		new Thread(()->{
 			for (int i = 0; i < 100; i++) {
 				System.out.println("A" + i);
-
 			}
 		}).start();
 	}
