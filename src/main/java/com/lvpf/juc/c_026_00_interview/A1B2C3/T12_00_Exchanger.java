@@ -1,14 +1,11 @@
 package com.lvpf.juc.c_026_00_interview.A1B2C3;
 
 import java.util.concurrent.Exchanger;
-
 public class T12_00_Exchanger {
 	private static Exchanger<String> exchanger = new Exchanger<>();
-
 	public static void main(String[] args) {
 		char[] aI = "1234567".toCharArray();
 		char[] aC = "ABCDEFG".toCharArray();
-
 		new Thread(() -> {
 			for (int i = 0; i < aI.length; i++){
 				System.out.print(aI[i]);
@@ -30,5 +27,6 @@ public class T12_00_Exchanger {
 				System.out.print(aC[i]);
 			}
 		}).start();
+
 	}
 }
