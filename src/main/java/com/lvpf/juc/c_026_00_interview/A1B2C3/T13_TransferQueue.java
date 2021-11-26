@@ -30,7 +30,5 @@ public class T13_TransferQueue {
 				e.printStackTrace();
 			}
 		},"t2").start();
-
-
 	}
 }

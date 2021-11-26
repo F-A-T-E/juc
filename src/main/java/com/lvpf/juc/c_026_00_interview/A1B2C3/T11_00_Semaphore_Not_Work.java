@@ -6,6 +6,8 @@ public class T11_00_Semaphore_Not_Work {
 	public static void main(String[] args) {
 		char[] aI = "1234567".toCharArray();
 		char[] aC = "ABCDEFG".toCharArray();
+
+		//同时允许多少个线程运行
 		Semaphore semaphore = new Semaphore(1,true);
 //限流
 		new Thread(() -> {

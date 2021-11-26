@@ -38,11 +38,8 @@ public class T10_00_PipedStream {
 			try{
 				for(char c : aC) {
 					System.out.println(c);
-
 					output2.write(msg.getBytes());
-
 					input2.read(buffer);
-
 					if(new String(buffer).equals(msg)){
 						continue;
 					}
