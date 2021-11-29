@@ -1,13 +1,11 @@
 package com.lvpf.juc.c_026_01_ThreadPool;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class T09_FixedThreadPool {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ExecutionException, InterruptedException {
 		long start = System.currentTimeMillis();
 		getPrime(1,200000);
 		long end = System.currentTimeMillis();
@@ -29,15 +27,42 @@ public class T09_FixedThreadPool {
 		Future<List<Integer>> f4 = service.submit(t4);
 
 		start = System.currentTimeMillis();
+		f1.get();
+		f2.get();
+		f3.get();
+		f4.get();
+		end = System.currentTimeMillis();
 		System.out.println(end - start);
 	}
 	static class MyTask implements Callable<List<Integer>>{
 		int startPos, endPos;
+
+		public MyTask(int i, int i1) {
+		}
 
 		@Override
 		public List<Integer> call() throws Exception {
 			return null;
 		}
 	}
+		static boolean isPrime(int num) {
+			for (int i=2; i<=num/2; i++){
+				if (num % i == 0) {
+					return false;
+				}
+			}
+			return true;
+		}
+		static List<Integer> getPrime(int start, int end){
+			List<Integer> results = new ArrayList<>();
+			for (int i=start; i <= end; i++){
+				if (isPrime(i)) {
+					results.add(i);
+				}
+			}
+			return results;
+		}
+
+
 
 }
