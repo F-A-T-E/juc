@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class T08_CachePool {
+public class T08_CachedPool {
 	public static void main(String[] args) throws InterruptedException{
 		ExecutorService service = Executors.newCachedThreadPool();
 		System.out.println(service);

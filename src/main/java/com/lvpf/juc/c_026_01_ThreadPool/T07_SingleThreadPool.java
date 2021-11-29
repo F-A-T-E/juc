@@ -10,6 +10,7 @@ public class T07_SingleThreadPool {
 		for (int i=0; i<5; i++){
 			final int j = i;
 			service.execute(()->{
+
 				System.out.println(j + " " + Thread.currentThread().getName());
 			});
 		}
