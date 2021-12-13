@@ -1,5 +1,7 @@
 package com.lvpf.juc.c_007;
 
+import com.lvpf.juc.c_000.T02_HowToCreatThread;
+
 /**
  * 同步方法和非同步方法是否可以同时调用
  *
@@ -15,7 +17,6 @@ public class T {
 		}
 		System.out.println(Thread.currentThread().getName() + "m1 end");
 	}
-
 	public void m2(){
 		try {
 			Thread.sleep(5000);
@@ -24,7 +25,6 @@ public class T {
 		}
 		System.out.println(Thread.currentThread().getName() + "m2");
 	}
-
 	public static void main(String[] args) {
 		T t = new T();
 		/*new Thread(()->t.m1(),"t1").start();

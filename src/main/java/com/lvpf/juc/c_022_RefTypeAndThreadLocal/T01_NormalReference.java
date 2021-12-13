@@ -8,7 +8,6 @@ public class T01_NormalReference {
 		M m = new M();
 		m = null;
 		System.gc(); //DisableExplicitGC
-
 		System.in.read();
 	}
 }
