@@ -4,7 +4,6 @@ import com.lvpf.juc.c_000.T02_HowToCreatThread;
 
 /**
  * 同步方法和非同步方法是否可以同时调用
- *
  */
 
 public class T {
