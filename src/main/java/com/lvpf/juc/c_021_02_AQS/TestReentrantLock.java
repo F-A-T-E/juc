@@ -8,14 +8,11 @@ public class TestReentrantLock {
 
 	public static void main(String[] args) {
 		ReentrantLock lock = new ReentrantLock();
-
-
 		try {
 			lock.lock();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		i++;
 
 		lock.unlock();
