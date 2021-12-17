@@ -15,13 +15,13 @@ public class T06_00_Future {
 
 		System.out.println(task.get());//阻塞
 
-			 //***************************
-			 ExecutorService service = Executors.newFixedThreadPool(5);
-			 Future<Integer> f = service.submit(()->{
-			 TimeUnit.MILLISECONDS.sleep(500);
-			 return 1;
-			 });
-			 System.out.println(f.get());
-			 System.out.println(f.isDone());
-			 }
+		//***************************
+		ExecutorService service = Executors.newFixedThreadPool(5);
+		Future<Integer> f = service.submit(() -> {
+			TimeUnit.MILLISECONDS.sleep(500);
+			return 1;
+		});
+		System.out.println(f.get());
+		System.out.println(f.isDone());
 	}
+}

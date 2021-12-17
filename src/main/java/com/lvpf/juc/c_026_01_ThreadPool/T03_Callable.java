@@ -10,12 +10,9 @@ public class T03_Callable {
 				return "Hello Callable";
 			}
 		};
-
 		ExecutorService service = Executors.newCachedThreadPool();
 		Future<String> future = service.submit(c);//异步
-
 		System.out.println(future.get());//阻塞
-
 		service.shutdown();
 	}
 }
