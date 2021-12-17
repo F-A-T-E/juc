@@ -84,9 +84,7 @@ public class T12_ForkJoinPool {
 		/*ForkJoinPool fjp = new ForkJoinPool();
 		AddTask task = new AddTask(0,nums.length);
 		fjp.execute(task);*/
-
 		T12_ForkJoinPool temp = new T12_ForkJoinPool();
-
 		ForkJoinPool fjp = new ForkJoinPool();
 		AddTaskRet task = new AddTaskRet(0,nums.length);
 		long result = task.join();
