@@ -10,22 +10,16 @@ public class T09_FixedThreadPool {
 		getPrime(1,200000);
 		long end = System.currentTimeMillis();
 		System.out.println(end - start);
-
 		final int cpuCoreNum = 4;
-
 		ExecutorService service = Executors.newFixedThreadPool(cpuCoreNum);
-
 		MyTask t1 = new MyTask(1,80000);
 		MyTask t2 = new MyTask(80000,130000);
 		MyTask t3 = new MyTask(130001,170000);
 		MyTask t4 = new MyTask(170001,200000);
-
-
 		Future<List<Integer>> f1 = service.submit(t1);
 		Future<List<Integer>> f2 = service.submit(t2);
 		Future<List<Integer>> f3 = service.submit(t3);
 		Future<List<Integer>> f4 = service.submit(t4);
-
 		start = System.currentTimeMillis();
 		f1.get();
 		f2.get();
@@ -36,7 +30,6 @@ public class T09_FixedThreadPool {
 	}
 	static class MyTask implements Callable<List<Integer>>{
 		int startPos, endPos;
-
 		public MyTask(int i, int i1) {
 		}
 
@@ -62,7 +55,4 @@ public class T09_FixedThreadPool {
 			}
 			return results;
 		}
-
-
-
 }
