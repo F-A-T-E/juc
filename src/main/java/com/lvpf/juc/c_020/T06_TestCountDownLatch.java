@@ -54,5 +54,4 @@ public class T06_TestCountDownLatch {
 		}
 		System.out.println("end latch");
 	}
-
 }

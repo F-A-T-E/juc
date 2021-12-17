@@ -31,17 +31,14 @@ public class Account {
 	}
 
 	public static void main(String[] args) {
-
 		Account a = new Account();
 		new Thread(()->a.set("zhangsan",100.0)).start();
-
 		try {
 			TimeUnit.SECONDS.sleep(1);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		System.out.println(a.get("zhangsan"));
-
 		try {
 			TimeUnit.SECONDS.sleep(2);
 		} catch (InterruptedException e) {

@@ -8,7 +8,6 @@ public class T04_00_lock_condition {
 	public static void main(String[] args) {
 		char[] aI = "1234567".toCharArray();
 		char[] aC = "ABCDEFG".toCharArray();
-
 		Lock lock = new ReentrantLock();
 		Condition condition = lock.newCondition();
 

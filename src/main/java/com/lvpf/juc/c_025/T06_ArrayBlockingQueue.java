@@ -14,7 +14,6 @@ public class T06_ArrayBlockingQueue {
 		for (int i = 0; i < 10; i++) {
 			strs.put("a" + i);
 		}
-
 		strs.offer("aaa",1, TimeUnit.SECONDS);
 		System.out.println(strs);
 	}

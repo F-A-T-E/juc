@@ -6,7 +6,6 @@ public class T09_TransferQueue {
 
 	public static void main(String[] args) throws InterruptedException {
 		LinkedTransferQueue<String> strs = new LinkedTransferQueue<>();
-
 		new Thread(()->{
 			try{
 				System.out.println(strs.take());
@@ -14,14 +13,8 @@ public class T09_TransferQueue {
 				e.printStackTrace();
 			}
 		}).start();
-
-
 		strs.transfer("aaa");
-
-
 		//strs.put("aaa");
-
-
 		/*new Thread(() ->{
 			try{
 				System.out.println(strs.take());
