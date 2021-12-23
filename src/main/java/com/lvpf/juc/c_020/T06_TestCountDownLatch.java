@@ -4,8 +4,8 @@ import java.util.concurrent.CountDownLatch;
 
 public class T06_TestCountDownLatch {
 	public static void main(String[] args) {
-		usingJoin();
-		usingCountDownLatch();
+		System.out.println((Math.random()+"").substring(2,8));
+		System.out.println((Math.random()*9+1)*Math.pow(10,5));
 	}
 
 	private static void usingJoin(){
@@ -54,4 +54,5 @@ public class T06_TestCountDownLatch {
 		}
 		System.out.println("end latch");
 	}
+
 }
